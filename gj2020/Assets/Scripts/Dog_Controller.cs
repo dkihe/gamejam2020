@@ -6,6 +6,7 @@ public class Dog_Controller : MonoBehaviour
 {
 
     public float rot_speed;
+    public Transform shoot_point;
     void Start() {
         
     }
@@ -18,7 +19,6 @@ public class Dog_Controller : MonoBehaviour
     void aim(float v_dir) {
         if (Input.GetButton("Vertical")) {
             transform.Rotate(new Vector3(0, 0, v_dir) * rot_speed * Time.deltaTime);
-            Debug.Log("press");
         }   
     }
 }
